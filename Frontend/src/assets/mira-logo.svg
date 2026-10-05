@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="100%" height="100%">
+  <defs>
+    <!-- M Gradient -->
+    <linearGradient id="m-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFD166" />
+    </linearGradient>
+  </defs>
+
+  <!-- Red/Coral Speech Bubble Icon -->
+  <path d="M 35 18 
+           C 58 18, 70 24, 70 48 
+           C 70 72, 58 78, 38 78 
+           C 22 78, 20 81, 18 84 
+           C 16 87, 14 85, 15 80 
+           C 16 75, 12 68, 12 48 
+           C 12 24, 20 18, 35 18 Z" 
+        fill="#FF5A52" />
+
+  <!-- White/Yellow Gradient 'M' Inside Icon -->
+  <path d="M 27 61 
+           L 27 35 
+           L 32 35 
+           L 37 49 
+           L 42 35 
+           L 47 35 
+           L 47 61 
+           L 42 61 
+           L 42 43 
+           L 38.5 54 
+           L 35.5 54 
+           L 32 43 
+           L 32 61 Z" 
+        fill="url(#m-grad)" />
+
+  <!-- 'mira' Text -->
+  <g fill="#111318" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="36" letter-spacing="-1">
+    <!-- m -->
+    <text x="82" y="60">mira</text>
+  </g>
+</svg>
