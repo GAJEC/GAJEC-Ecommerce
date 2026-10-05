@@ -1,0 +1,31 @@
+{
+  "name": "mira-backend",
+  "version": "1.0.0",
+  "description": "The backend of our Ecommerce application",
+  "keywords": [
+    "Ecommerce",
+    "Backend",
+    "Node.js",
+    "Express",
+    "MySql"
+  ],
+  "homepage": "https://github.com/GAJEC/GAJEC-Ecommerce#readme",
+  "bugs": {
+    "url": "https://github.com/GAJEC/GAJEC-Ecommerce/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GAJEC/GAJEC-Ecommerce.git"
+  },
+  "license": "ISC",
+  "author": "GAJEC",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fastify": "^5.12.5",
+    "mysql2": "^3.24.5"
+  }
+}
