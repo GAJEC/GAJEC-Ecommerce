@@ -479,6 +479,16 @@
   color: var(--muted);
   font-size: 15px;
 }
+.pd-btn--ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.pd-btn__icon {
+  width: 18px;
+  height: 18px;
+}
 
 @media (max-width: 900px) {
   .pd {
