@@ -4,14 +4,14 @@ import Navbar from './Components/Navbar/Navbar.jsx'
 import Hero from './Components/Hero/Hero.jsx'
 import ProductDetail from './Components/Pages/ProductDetail/ProductDetail.jsx'
 
+import Login from './components/Login/Login.jsx'
+
+
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-      </Routes>
+      <Hero />
     </div>
   )
 }
