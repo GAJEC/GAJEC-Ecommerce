@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ProductDetailStle from "../assets/styles/ProductDetail.module.css";
 
-import img1 from "../assets/product-1.png";
-import img2 from "../assets/product-1-top.png";
-import img3 from "../assets/product-1-rear.png";
-import img4 from "../assets/product-1-bottom.png";
+import img1 from "../assets/images/product-1.png";
+import img2 from "../assets/images/product-1-top.png";
+import img3 from "../assets/images/product-1-rear.png";
+import img4 from "../assets/images/product-1-bottom.png";
 
 const product = {
   badge: "TOP PICK",

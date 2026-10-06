@@ -3,14 +3,14 @@ import { useNavigate } from "react-router-dom";
 
 import Hero from "../Components/Hero/Hero";
 
-import book from "../assets/book.png";
-import groceries from "../assets/grocery.png";
-import gaming from "../assets/gaming.png";
-import fashion from "../assets/fashion.png";
-import home from "../assets/home.png";
-import sports from "../assets/sports.png";
-import tech from "../assets/tech.png";
-import beauty from "../assets/beauty.png";
+import book from "../assets/images/book.png";
+import groceries from "../assets/images/grocery.png";
+import gaming from "../assets/images/gaming.png";
+import fashion from "../assets/images/fashion.png";
+import home from "../assets/images/home.png";
+import sports from "../assets/images/sports.png";
+import tech from "../assets/images/tech.png";
+import beauty from "../assets/images/beauty.png";
 
 const categories = [
   { name: "Tech", icon: tech, tone: "violet" },

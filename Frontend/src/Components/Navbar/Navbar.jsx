@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/mira-logo.svg";
-import bell from "../../assets/bell.png";
-import heart from "../../assets/heart.png";
-import moon from "../../assets/night-mode.png";
-import search from "../../assets/search.png";
-import shoppingCart from "../../assets/shopping-cart.png";
+import logo from "../../assets/images/mira-logo.svg";
+import bell from "../../assets/images/bell.png";
+import heart from "../../assets/images/heart.png";
+import moon from "../../assets/images/night-mode.png";
+import search from "../../assets/images/search.png";
+import shoppingCart from "../../assets/images/shopping-cart.png";
 
 const Navbar = () => {
   return (
