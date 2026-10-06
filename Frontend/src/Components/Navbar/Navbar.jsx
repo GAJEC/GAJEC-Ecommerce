@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/mira-logo.svg";
 import bell from "../../assets/bell.png";
@@ -11,10 +12,13 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <a href="" className="navbar-logo">
-          <img src={logo} alt="Logo" />
-        </a>
-
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src={logo} alt="Mira home" />
+        </Link>
         <div className="search-container">
           <img src={search} alt="Search" className="search-icon" />
           <input

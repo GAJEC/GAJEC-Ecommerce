@@ -2,252 +2,60 @@ import React from "react";
 import "./Hero.css";
 
 import shoeImg from "../../assets/shoe.png";
-import book from "../../assets/book.png";
-import groceries from "../../assets/grocery.png";
-import gaming from "../../assets/gaming.png";
-import fashion from "../../assets/fashion.png";
-import home from "../../assets/home.png";
-import sports from "../../assets/sports.png";
-import tech from "../../assets/tech.png";
-import beauty from "../../assets/beauty.png";
-
-const categories = [
-  { name: "Tech", icon: tech, tone: "violet" },
-  { name: "Fashion", icon: fashion, tone: "red" },
-  { name: "Beauty", icon: beauty, tone: "orange" },
-  { name: "Home", icon: home, tone: "blue" },
-  { name: "Groceries", icon: groceries, tone: "green" },
-  { name: "Sports", icon: sports, tone: "amber" },
-  { name: "Gaming", icon: gaming, tone: "pink" },
-  { name: "Books", icon: book, tone: "sky" },
-];
-
-const products = [
-  {
-    shop: "SOLE STUDIO",
-    name: "CloudStep Everyday Sneakers",
-    price: "₱1,899",
-    old: "₱2,699",
-    rating: "4.9",
-    sold: "2.1k sold",
-    badge: "30% OFF",
-    liked: false,
-    image: null,
-    bg: "#f3d9e6",
-  },
-  {
-    shop: "MOTION MNL",
-    name: "Aero Max Street Runners",
-    price: "₱2,490",
-    old: "₱3,290",
-    rating: "4.8",
-    sold: "890 sold",
-    badge: "TRENDING",
-    liked: false,
-    image: null,
-    bg: "#cfcdcb",
-  },
-  {
-    shop: "KIND SKIN",
-    name: "Radiance Barrier Serum",
-    price: "₱649",
-    old: "₱899",
-    rating: "4.9",
-    sold: "4.6k sold",
-    badge: "28% OFF",
-    liked: true,
-    image: null,
-    bg: "#3a3b40",
-  },
-  {
-    shop: "COMMON GROUND",
-    name: "Retro Canvas Low",
-    price: "₱1,299",
-    old: "₱1,799",
-    rating: "4.7",
-    sold: "1.4k sold",
-    badge: "FLASH",
-    liked: false,
-    image: null,
-    bg: "#f2a516",
-  },
-  {
-    shop: "KIND SKIN",
-    name: "Daily Dew Face Oil",
-    price: "₱520",
-    old: "₱750",
-    rating: "4.8",
-    sold: "712 sold",
-    badge: "NEW",
-    liked: false,
-    image: null,
-    bg: "#c98a55",
-  },
-  {
-    shop: "SOLE STUDIO",
-    name: "Court Classic Sneakers",
-    price: "₱2,199",
-    old: "₱2,999",
-    rating: "4.9",
-    sold: "3.2k sold",
-    badge: "BESTSELLER",
-    liked: true,
-    image: null,
-    bg: "#dcdce0",
-  },
-];
 
 const Hero = () => {
-  const navigate = useNavigate();
   return (
-    <main className="hero-page">
-      <section className="hero-grid">
-        <article className="hero-main">
-          <div className="hero-main__text">
-            <p className="eyebrow eyebrow--dark">
-              MID-YEAR EDIT · UP TO 60% OFF
-            </p>
-            <h1 className="hero-main__title">
-              Great finds,
-              <span>made for you</span>
-            </h1>
-            <p className="hero-main__sub">
-              Meet your new favorite things from trusted local shops, all in one
-              joyful place.
-            </p>
-            <button className="btn-dark">
-              Shop the edit <span>→</span>
-            </button>
-          </div>
-
-          <div className="hero-main__visual">
-            <img src={shoeImg} alt="Orange sneaker" />
-          </div>
-
-          <div className="hero-main__badge">
-            <small>TODAY ONLY</small>
-            <strong>Free shipping</strong>
-          </div>
-        </article>
-
-        <article className="promo promo--flash">
-          <div>
-            <p className="eyebrow">12:08:42 LEFT</p>
-            <h3>Flash finds</h3>
-            <p className="promo__sub">Prices move fast</p>
-          </div>
-          <span className="promo__discount">-50%</span>
-          <span className="promo__arrow">→</span>
-        </article>
-
-        <article className="promo promo--perks">
-          <div>
-            <p className="eyebrow eyebrow--light">MIRA PERKS</p>
-            <h3>
-              ₱200
-              <br />
-              welcome gift
-            </h3>
-            <p className="promo__sub">For your first checkout</p>
-          </div>
-          <span className="promo__letter">M</span>
-          <span className="promo__arrow">→</span>
-        </article>
-      </section>
-
-      <section className="explore">
-        <div className="section-head">
-          <div>
-            <p className="eyebrow eyebrow--accent">EXPLORE</p>
-            <h2>Everything you’re into</h2>
-          </div>
-          <a href="#" className="view-all">
-            View all <span>→</span>
-          </a>
+    <section className="hero-grid">
+      <article className="hero-main">
+        <div className="hero-main__text">
+          <p className="eyebrow eyebrow--dark">MID-YEAR EDIT · UP TO 60% OFF</p>
+          <h1 className="hero-main__title">
+            Great finds,
+            <span>made for you</span>
+          </h1>
+          <p className="hero-main__sub">
+            Meet your new favorite things from trusted local shops, all in one
+            joyful place.
+          </p>
+          <button className="btn-dark">
+            Shop the edit <span>→</span>
+          </button>
         </div>
 
-        <div className="category-grid">
-          {categories.map((c) => (
-            <button key={c.name} className="category">
-              <span className={`category__icon tone-${c.tone}`}>
-                <img src={c.icon} alt="" />
-              </span>
-              <span className="category__name">{c.name}</span>
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section className="smart">
-        <div className="smart__left">
-          <span className="smart__icon">✦</span>
-          <div>
-            <p className="eyebrow eyebrow--light">SMART MATCH</p>
-            <h2>Tell Mira what you need.</h2>
-            <p className="smart__hint">
-              Try “comfortable sneakers under ₱2,000 for daily walks.”
-            </p>
-          </div>
+        <div className="hero-main__visual">
+          <img src={shoeImg} alt="Orange sneaker" />
         </div>
 
-        <div className="smart__input">
-          <input type="text" placeholder="Tell Mira what you need..." />
-          <button>→</button>
+        <div className="hero-main__badge">
+          <small>TODAY ONLY</small>
+          <strong>Free shipping</strong>
         </div>
-      </section>
+      </article>
 
-      <section className="picks">
-        <div className="section-head">
-          <div>
-            <p className="eyebrow eyebrow--accent">PICKED FOR YOU</p>
-            <h2>Good things, thoughtfully chosen</h2>
-          </div>
-          <div className="tabs">
-            <button className="tabs__btn tabs__btn--active">For you</button>
-            <button className="tabs__btn">Trending</button>
-            <button className="tabs__btn">New in</button>
-          </div>
+      <article className="promo promo--flash">
+        <div>
+          <p className="eyebrow">12:08:42 LEFT</p>
+          <h3>Flash finds</h3>
+          <p className="promo__sub">Prices move fast</p>
         </div>
+        <span className="promo__discount">-50%</span>
+        <span className="promo__arrow">→</span>
+      </article>
 
-        <div className="product-grid">
-          {products.map((p, i) => (
-            <article key={i} className="product">
-              <button
-                className="product__card"
-                onClick={() => navigate(`/product/${p.id}`)}
-              >
-                <div className="product__img" style={{ background: p.bg }}>
-                  {p.image && <img src={p.image} alt={p.name} />}
-                  <span className="product__badge">{p.badge}</span>
-                </div>
-
-                <div className="product__body">
-                  <p className="product__shop">
-                    {p.shop} <span className="product__verified">✓</span>
-                  </p>
-                  <h3 className="product__name">{p.name}</h3>
-                  <p className="product__price">
-                    {p.price} <s>{p.old}</s>
-                  </p>
-                  <p className="product__meta">
-                    <span className="product__star">★</span> {p.rating}
-                    <span>{p.sold}</span>
-                  </p>
-                  <p className="product__delivery">⛟ Free delivery</p>
-                </div>
-              </button>
-
-              <button
-                className={`product__heart ${p.liked ? "is-liked" : ""}`}
-                aria-label="Add to wishlist"
-              >
-                {p.liked ? "♥" : "♡"}
-              </button>
-            </article>
-          ))}
+      <article className="promo promo--perks">
+        <div>
+          <p className="eyebrow eyebrow--light">MIRA PERKS</p>
+          <h3>
+            ₱200
+            <br />
+            welcome gift
+          </h3>
+          <p className="promo__sub">For your first checkout</p>
         </div>
-      </section>
-    </main>
+        <span className="promo__letter">M</span>
+        <span className="promo__arrow">→</span>
+      </article>
+    </section>
   );
 };
 
