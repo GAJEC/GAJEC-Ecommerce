@@ -72,10 +72,9 @@ const ProductDetail = () => {
             {product.images.map((src, i) => (
               <button
                 key={i}
-                className={
-                  ProductDetailStle["pd-thumb"] +
-                  ` ${i === activeImg ? "is-active" : ""}`
-                }
+                className={`${ProductDetailStle["pd-thumb"]} ${
+                  i === activeImg ? ProductDetailStle["is-active"] : ""
+                }`}
                 onClick={() => setActiveImg(i)}
               >
                 <img src={src} alt="" />
@@ -124,10 +123,9 @@ const ProductDetail = () => {
                 <button
                   key={c.name}
                   aria-label={c.name}
-                  className={
-                    ProductDetailStle["pd-swatch"] +
-                    ` ${i === color ? "is-active" : ""}`
-                  }
+                  className={`${ProductDetailStle["pd-swatch"]} ${
+                    i === color ? ProductDetailStle["is-active"] : ""
+                  }`}
                   style={{ background: c.hex }}
                   onClick={() => setColor(i)}
                 />
@@ -144,10 +142,9 @@ const ProductDetail = () => {
               {product.sizes.map((s) => (
                 <button
                   key={s}
-                  className={
-                    ProductDetailStle["pd-size"] +
-                    ` ${s === size ? "is-active" : ""}`
-                  }
+                  className={`${ProductDetailStle["pd-size"]} ${
+                    s === size ? ProductDetailStle["is-active"] : ""
+                  }`}
                   onClick={() => setSize(s)}
                 >
                   {s}
@@ -237,7 +234,7 @@ const ProductDetail = () => {
           {tabs.map((t, i) => (
             <button
               key={t}
-              className={`pd-tabs__btn ${i === tab ? "is-active" : ""}`}
+              className={`${ProductDetailStle["pd-tabs__btn"]} ${i === tab ? ProductDetailStle["is-active"] : ""}`}
               onClick={() => setTab(i)}
             >
               {t}
