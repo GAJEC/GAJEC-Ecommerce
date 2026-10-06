@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 
-import shoeImg from "../../assets/shoe.png";
+import shoeImg from "../../assets/images/shoe.png";
 
 const Hero = () => {
   return (
