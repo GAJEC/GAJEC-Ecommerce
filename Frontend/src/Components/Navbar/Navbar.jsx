@@ -8,6 +8,8 @@ import moon from "../../assets/images/night-mode.png";
 import search from "../../assets/images/search.png";
 import shoppingCart from "../../assets/images/shopping-cart.png";
 
+import ProfileMenu from "../ProfileMenu/ProfileMenu";
+
 const Navbar = () => {
   return (
     <header className="navbar">
@@ -43,7 +45,7 @@ const Navbar = () => {
           <button className="nav-icon-button">
             <img src={moon} alt="Dark Mode" />
           </button>
-          <button className="profile-button">AM</button>
+          <ProfileMenu />
           <button className="sell-button">Start selling</button>
         </nav>
       </div>

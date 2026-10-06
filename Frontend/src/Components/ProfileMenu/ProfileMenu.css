@@ -1,0 +1,121 @@
+.profile-menu {
+  position: relative;
+}
+
+.profile-button.is-open {
+  outline: 2px solid #6c4cf5;
+  outline-offset: 2px;
+}
+
+.profile-menu__panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 290px;
+  background: #fff;
+  border: 1px solid #e6e3ec;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(27, 26, 34, 0.14);
+  padding: 18px 0 8px;
+  z-index: 1000;
+  animation: profile-menu-in 0.14s ease-out;
+}
+
+@keyframes profile-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-menu__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid #ece9f1;
+}
+
+.profile-menu__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f15b52;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profile-menu__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b1a22;
+}
+
+.profile-menu__email {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #7a7886;
+}
+
+.profile-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.profile-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 20px;
+  font-size: 14px;
+  color: #1b1a22;
+  text-decoration: none;
+}
+
+.profile-menu__item:hover {
+  background: #f6f4fb;
+}
+
+.profile-menu__chevron {
+  font-size: 18px;
+  color: #1b1a22;
+}
+
+.profile-menu__signout {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 14px 20px 10px;
+  border: 0;
+  border-top: 1px solid #ece9f1;
+  background: none;
+  text-align: left;
+  font: inherit;
+  font-size: 14px;
+  color: #ef5a4d;
+  cursor: pointer;
+}
+
+.profile-menu__signout:hover {
+  background: #fff5f4;
+}
+
+@media (max-width: 480px) {
+  .profile-menu__panel {
+    position: fixed;
+    top: 72px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+  }
+}
