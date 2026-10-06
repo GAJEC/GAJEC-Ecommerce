@@ -1,14 +1,12 @@
 .pd {
-  --purple: #6c4cf5;
-  --purple-soft: #eeebfe;
-  --ink: #1b1a22;
-  --muted: #7a7886;
-  --line: #e6e3ec;
-  --bg: #faf8f5;
+  /* Aliases to the global theme tokens (index.css), so dark mode and
+     the accent picker apply here. Do NOT redefine --ink/--muted/--line. */
+  --purple: var(--accent);
+  --purple-soft: color-mix(in srgb, var(--accent) 14%, var(--card));
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 32px 64px;
-  background: var(--bg);
+  background: var(--page);
   color: var(--ink);
   font-size: 14px;
   box-sizing: border-box;
@@ -51,49 +49,13 @@
 .pd-info {
   min-width: 0;
 }
-.pd-top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 56px;
-}
-.pd-gallery,
-.pd-info {
-  min-width: 0;
-}
-.pd-top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 56px;
-}
-.pd-gallery,
-.pd-info {
-  min-width: 0;
-}
-.pd-top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 56px;
-}
-.pd-gallery,
-.pd-info {
-  min-width: 0;
-}
-.pd-top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 56px;
-}
-.pd-gallery,
-.pd-info {
-  min-width: 0;
-}
 
 .pd-gallery__main {
   position: relative;
   aspect-ratio: 1;
   border-radius: 20px;
   overflow: hidden;
-  background: #e9e4f5;
+  background: var(--purple-soft);
 }
 .pd-gallery__main img {
   width: 100%;
@@ -107,7 +69,7 @@
   bottom: 16px;
   border: 0;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
+  background: color-mix(in srgb, var(--card) 92%, transparent);
   padding: 8px 14px;
   font-size: 12px;
 }
@@ -125,7 +87,7 @@
   border: 2px solid transparent;
   border-radius: 10px;
   overflow: hidden;
-  background: #ddd;
+  background: var(--line);
 }
 .pd-thumb img {
   position: absolute;
@@ -199,7 +161,7 @@
   font-size: 12px;
   font-weight: 600;
   color: #e5484d;
-  background: #fde8ea;
+  background: color-mix(in srgb, #e5484d 14%, var(--card));
   padding: 4px 9px;
   border-radius: 5px;
 }
@@ -260,7 +222,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid var(--card);
   padding: 0;
   box-shadow: 0 0 0 1px var(--line);
 }
@@ -277,7 +239,7 @@
   height: 40px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fff;
+  background: var(--card);
   font-size: 14px;
 }
 .pd-size.is-active {
@@ -299,7 +261,7 @@
   height: 50px;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: #fff;
+  background: var(--card);
   padding: 0 14px;
   font-size: 14px;
 }
@@ -318,7 +280,7 @@
 .pd-btn--ghost {
   flex: 1;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--card);
   color: var(--ink);
 }
 .pd-btn--primary {
@@ -326,7 +288,7 @@
   border: 0;
   background: var(--purple);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(108, 76, 245, 0.35);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 .pd-wish {
   display: block;
@@ -343,7 +305,7 @@
   gap: 14px;
   margin-top: 20px;
   padding: 16px 18px;
-  background: #efede9;
+  background: color-mix(in srgb, var(--ink) 6%, var(--card));
   border-radius: 12px;
   font-size: 13px;
 }
@@ -369,7 +331,7 @@
   gap: 18px;
   margin-top: 36px;
   padding: 22px 26px;
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: 20px;
 }
@@ -378,7 +340,7 @@
   height: 58px;
   border-radius: 12px;
   background: var(--ink);
-  color: #fff;
+  color: var(--card);
   display: grid;
   place-items: center;
   font-size: 16px;
@@ -421,7 +383,7 @@
 }
 .pd-shop__chat {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--card);
   border-radius: 10px;
   padding: 12px 22px;
   font-size: 14px;
@@ -438,7 +400,7 @@
 .pd-details {
   margin-top: 22px;
   padding: 0 36px 44px;
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: 20px;
 }
@@ -453,7 +415,7 @@
   padding: 24px 0;
   font-size: 13px;
   font-weight: 600;
-  color: #4a4856;
+  color: var(--muted);
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
 }

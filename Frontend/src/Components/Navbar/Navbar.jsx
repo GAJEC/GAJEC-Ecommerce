@@ -7,10 +7,13 @@ import heart from "../../assets/images/heart.png";
 import moon from "../../assets/images/night-mode.png";
 import search from "../../assets/images/search.png";
 import shoppingCart from "../../assets/images/shopping-cart.png";
+import { useTheme } from "../../context/ThemeContext";
 
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
 const Navbar = () => {
+  const { mode, toggleMode } = useTheme();
+
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -42,8 +45,13 @@ const Navbar = () => {
             <img src={shoppingCart} alt="Shopping Cart" />
             <span className="cart-badge">2</span>
           </button>
-          <button className="nav-icon-button">
-            <img src={moon} alt="Dark Mode" />
+          <button
+            className="nav-icon-button"
+            onClick={toggleMode}
+            aria-label={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            aria-pressed={mode === "dark"}
+          >
+            <img src={moon} alt="" />
           </button>
           <ProfileMenu />
           <button className="sell-button">Start selling</button>

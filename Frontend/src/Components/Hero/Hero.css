@@ -44,7 +44,7 @@
   color: #fff;
 }
 .eyebrow--accent {
-  color: var(--accent);
+  color: var(--coral);
 }
 
 .btn-dark {
@@ -223,7 +223,7 @@
   font-size: 150px;
   font-weight: 900;
   line-height: 1;
-  color: #5b4a9c;
+  color: var(--coral);
   opacity: 0.55;
   pointer-events: none;
 }
@@ -277,7 +277,7 @@
 }
 
 .category:hover {
-  border-color: var(--accent);
+  border-color: var(--coral);
   box-shadow: 0 6px 18px rgba(40, 20, 90, 0.12);
   transform: translateY(-8px);
 }
@@ -343,7 +343,7 @@
   padding: 0 32px;
   height: 144px;
   border-radius: 24px;
-  background: var(--accent);
+  background: var(--coral);
   color: #fff;
   overflow: hidden;
 }
@@ -469,7 +469,7 @@
   cursor: pointer;
 }
 .product__card:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--coral);
   outline-offset: -2px;
   border-radius: 18px;
 }
@@ -516,7 +516,7 @@
   line-height: 1;
 }
 .product__heart.is-liked {
-  background: var(--accent);
+  background: var(--coral);
   color: #fff;
 }
  
@@ -537,7 +537,7 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--coral);
   color: #fff;
   font-size: 6px;
 }
@@ -549,7 +549,7 @@
 .product__price {
   font-size: 15px;
   font-weight: 800;
-  color: var(--accent);
+  color: var(--coral);
 }
 .product__price s {
   margin-left: 4px;
