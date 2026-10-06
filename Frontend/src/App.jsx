@@ -1,16 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar.jsx";
-import Home from "./Pages/Home/Home.jsx";
-import ProductDetail from "./Pages/ProductDetail/ProductDetail.jsx";
+import Home from "./Pages/Home.jsx";
+import ProductDetail from "./Pages/ProductDetail.jsx";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/" element={<><Navbar /><Home /></>} />
+        <Route path="/product/:id" element={<><Navbar /><ProductDetail /></>} />
       </Routes>
     </div>
   );

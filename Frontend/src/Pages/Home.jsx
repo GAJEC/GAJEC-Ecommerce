@@ -1,17 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Home.css";
 
-import Hero from "../../Components/Hero/Hero";
+import Hero from "../Components/Hero/Hero";
 
-import book from "../../assets/book.png";
-import groceries from "../../assets/grocery.png";
-import gaming from "../../assets/gaming.png";
-import fashion from "../../assets/fashion.png";
-import home from "../../assets/home.png";
-import sports from "../../assets/sports.png";
-import tech from "../../assets/tech.png";
-import beauty from "../../assets/beauty.png";
+import book from "../assets/book.png";
+import groceries from "../assets/grocery.png";
+import gaming from "../assets/gaming.png";
+import fashion from "../assets/fashion.png";
+import home from "../assets/home.png";
+import sports from "../assets/sports.png";
+import tech from "../assets/tech.png";
+import beauty from "../assets/beauty.png";
 
 const categories = [
   { name: "Tech", icon: tech, tone: "violet" },
