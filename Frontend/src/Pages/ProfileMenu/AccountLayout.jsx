@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import "../../assets/styles/Account.css";
 
 export const peso = (n) => "₱" + n.toLocaleString("en-PH");
@@ -26,7 +26,14 @@ const nav = [
   { label: "Settings", to: "/account/settings" },
 ];
 
-const AccountLayout = () => (
+const AccountLayout = () => {
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    navigate("/login");
+  };
+
+  return (
   <main className="acct">
     <header className="acct-hero">
       <div className="acct-hero__user">
@@ -61,12 +68,21 @@ const AccountLayout = () => (
             <span aria-hidden="true">›</span>
           </NavLink>
         ))}
+        <button
+          type="button"
+          className="acct-nav__link acct-nav__signout"
+          onClick={handleSignOut}
+        >
+          <span>Sign out</span>
+          <span aria-hidden="true">›</span>
+        </button>
       </nav>
       <section className="acct-content">
         <Outlet />
       </section>
     </div>
   </main>
-);
+  );
+};
 
 export default AccountLayout;

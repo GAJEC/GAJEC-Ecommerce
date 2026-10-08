@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Hero from "../Components/Hero/Hero";
 
@@ -24,12 +24,84 @@ const categories = [
 ];
 
 const products = [
-  { id: 1, shop: "SOLE STUDIO", name: "CloudStep Everyday Sneakers", price: "₱1,899", old: "₱2,699", rating: "4.9", sold: "2.1k sold", badge: "30% OFF", liked: false, image: null, bg: "#f3d9e6" },
-  { id: 2, shop: "MOTION MNL", name: "Aero Max Street Runners", price: "₱2,490", old: "₱3,290", rating: "4.8", sold: "890 sold", badge: "TRENDING", liked: false, image: null, bg: "#cfcdcb" },
-  { id: 3, shop: "KIND SKIN", name: "Radiance Barrier Serum", price: "₱649", old: "₱899", rating: "4.9", sold: "4.6k sold", badge: "28% OFF", liked: true, image: null, bg: "#3a3b40" },
-  { id: 4, shop: "COMMON GROUND", name: "Retro Canvas Low", price: "₱1,299", old: "₱1,799", rating: "4.7", sold: "1.4k sold", badge: "FLASH", liked: false, image: null, bg: "#f2a516" },
-  { id: 5, shop: "KIND SKIN", name: "Daily Dew Face Oil", price: "₱520", old: "₱750", rating: "4.8", sold: "712 sold", badge: "NEW", liked: false, image: null, bg: "#c98a55" },
-  { id: 6, shop: "SOLE STUDIO", name: "Court Classic Sneakers", price: "₱2,199", old: "₱2,999", rating: "4.9", sold: "3.2k sold", badge: "BESTSELLER", liked: true, image: null, bg: "#dcdce0" },
+  {
+    id: 1,
+    shop: "SOLE STUDIO",
+    name: "CloudStep Everyday Sneakers",
+    price: "₱1,899",
+    old: "₱2,699",
+    rating: "4.9",
+    sold: "2.1k sold",
+    badge: "30% OFF",
+    liked: false,
+    image: null,
+    bg: "#f3d9e6",
+  },
+  {
+    id: 2,
+    shop: "MOTION MNL",
+    name: "Aero Max Street Runners",
+    price: "₱2,490",
+    old: "₱3,290",
+    rating: "4.8",
+    sold: "890 sold",
+    badge: "TRENDING",
+    liked: false,
+    image: null,
+    bg: "#cfcdcb",
+  },
+  {
+    id: 3,
+    shop: "KIND SKIN",
+    name: "Radiance Barrier Serum",
+    price: "₱649",
+    old: "₱899",
+    rating: "4.9",
+    sold: "4.6k sold",
+    badge: "28% OFF",
+    liked: true,
+    image: null,
+    bg: "#3a3b40",
+  },
+  {
+    id: 4,
+    shop: "COMMON GROUND",
+    name: "Retro Canvas Low",
+    price: "₱1,299",
+    old: "₱1,799",
+    rating: "4.7",
+    sold: "1.4k sold",
+    badge: "FLASH",
+    liked: false,
+    image: null,
+    bg: "#f2a516",
+  },
+  {
+    id: 5,
+    shop: "KIND SKIN",
+    name: "Daily Dew Face Oil",
+    price: "₱520",
+    old: "₱750",
+    rating: "4.8",
+    sold: "712 sold",
+    badge: "NEW",
+    liked: false,
+    image: null,
+    bg: "#c98a55",
+  },
+  {
+    id: 6,
+    shop: "SOLE STUDIO",
+    name: "Court Classic Sneakers",
+    price: "₱2,199",
+    old: "₱2,999",
+    rating: "4.9",
+    sold: "3.2k sold",
+    badge: "BESTSELLER",
+    liked: true,
+    image: null,
+    bg: "#dcdce0",
+  },
 ];
 
 const Home = () => {
@@ -45,14 +117,20 @@ const Home = () => {
             <p className="eyebrow eyebrow--accent">EXPLORE</p>
             <h2>Everything you’re into</h2>
           </div>
-          <a href="#" className="view-all">
+          <Link to="/search" className="view-all">
             View all <span>→</span>
-          </a>
+          </Link>
         </div>
 
         <div className="category-grid">
           {categories.map((c) => (
-            <button key={c.name} className="category">
+            <button
+              key={c.name}
+              className="category"
+              onClick={() =>
+                navigate(`/search?category=${encodeURIComponent(c.name)}`)
+              }
+            >
               <span className={`category__icon tone-${c.tone}`}>
                 <img src={c.icon} alt="" />
               </span>

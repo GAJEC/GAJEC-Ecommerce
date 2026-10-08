@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ProfileMenu.css";
+
+
 
 const user = {
   initials: "AM",
@@ -20,6 +22,7 @@ const menuItems = [
 ];
 
 const ProfileMenu = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef(null);
 
@@ -45,6 +48,7 @@ const ProfileMenu = () => {
 
   const handleSignOut = () => {
     setOpen(false);
+    navigate("/login");
   };
 
   return (

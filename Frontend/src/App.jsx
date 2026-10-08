@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Home from "./Pages/Home.jsx";
 import ProductDetail from "./Pages/ProductDetail.jsx";
+import Login from "./Components/Login/Login.jsx";
+import SearchResults from "./Pages/SearchResults.jsx";
 
 import AccountLayout from "./Pages/ProfileMenu/AccountLayout.jsx";
 import Overview from "./Pages/ProfileMenu/Overview.jsx";
@@ -19,7 +21,9 @@ const App = () => {
   return (
     <div>
       <Routes>
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<><Navbar /><Home /></>} />
+        <Route path="/search" element={<><Navbar /><SearchResults /></>} />
         <Route path="/product/:id" element={<><Navbar /><ProductDetail /></>} />
 
         <Route path="/account" element={<><Navbar /><AccountLayout /></>}>
