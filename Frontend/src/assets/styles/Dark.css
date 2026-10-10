@@ -1,0 +1,77 @@
+
+:root[data-theme="dark"] body {
+  background-color: var(--page);
+  color: var(--ink);
+}
+
+
+:root[data-theme="dark"] .navbar {
+  background: var(--card);
+  border-bottom-color: var(--line);
+}
+:root[data-theme="dark"] .search-container {
+  background: var(--card);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .search-container input {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .nav-icon-button img {
+  filter: invert(1);
+}
+:root[data-theme="dark"] .profile-button {
+  background: var(--accent-soft);
+}
+:root[data-theme="dark"] .sell-button {
+  background: var(--accent);
+}
+
+
+:root[data-theme="dark"] .profile-menu__panel {
+  background: var(--card);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .profile-menu__header {
+  border-bottom-color: var(--line);
+}
+:root[data-theme="dark"] .profile-menu__name,
+:root[data-theme="dark"] .profile-menu__item,
+:root[data-theme="dark"] .profile-menu__chevron {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .profile-menu__email {
+  color: var(--muted);
+}
+:root[data-theme="dark"] .profile-menu__item:hover {
+  background: var(--accent-soft);
+}
+:root[data-theme="dark"] .profile-menu__signout {
+  border-top-color: var(--line);
+}
+:root[data-theme="dark"] .profile-menu__signout:hover {
+  background: rgba(239, 90, 77, 0.12);
+}
+
+
+:root[data-theme="dark"] .hero-page {
+  --ink: #f1eff6;
+  --muted: #a09db0;
+  --accent-soft: #2c2745;
+  --border: #34313f;
+}
+:root[data-theme="dark"] .category,
+:root[data-theme="dark"] .product {
+  background: var(--card);
+}
+:root[data-theme="dark"] .tabs {
+  background: var(--line);
+}
+:root[data-theme="dark"] .tabs__btn--active {
+  background: var(--card);
+}
+:root[data-theme="dark"] .smart__input {
+  background: var(--card);
+}
+:root[data-theme="dark"] .product__heart:not(.is-liked) {
+  background: var(--card);
+}
